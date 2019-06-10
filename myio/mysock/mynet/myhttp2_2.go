@@ -11,7 +11,7 @@ func MyHttp22() {
 	mux.Handle("/", &myHandler22{})
 	mux.HandleFunc("/hello", sayhello22)
 
-	wd := "/disk/mygopath/src/iotestgo/res"
+	wd := "/disk/mygopath/src/go-study/res"
 
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(wd))))
 

@@ -29,7 +29,7 @@ func postFile(filename string, targetUrl string) error {
 	}
 
 	//打开文件句柄操作
-	fh, err := os.Open("/disk/mygopath/src/iotestgo/myio/mysock/mynet/myupload/" + filename)
+	fh, err := os.Open("/disk/mygopath/src/go-study/myio/mysock/mynet/myupload/" + filename)
 	if err != nil {
 		fmt.Println("error opening file")
 		return err

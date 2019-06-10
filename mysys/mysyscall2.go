@@ -15,7 +15,7 @@ func MySyscall2() {
 func test1() {
 	if os.Getppid() != 1 { //判断当其是否是子进程，当父进程return之后，子进程会被 系统1 号进程接管
 
-		filePath, _ := filepath.Abs("/disk/mygopath/src/iotestgo/res/run.sh") //将命令行参数中执行文件路径转换成可用路径
+		filePath, _ := filepath.Abs("/disk/mygopath/src/go-study/res/run.sh") //将命令行参数中执行文件路径转换成可用路径
 		cmd := exec.Command(filePath)
 		//将其他命令传入生成出的进程
 		cmd.Stdin = os.Stdin //给新进程设置文件描述符，可以重定向到文件中
@@ -28,7 +28,7 @@ func test1() {
 
 func test2() {
 	if os.Getppid() != 1 {
-		filePath, _ := filepath.Abs("/disk/mygopath/src/iotestgo/res/run.sh") //将命令行参数中执行文件路径转换成可用路径
+		filePath, _ := filepath.Abs("/disk/mygopath/src/go-study/res/run.sh") //将命令行参数中执行文件路径转换成可用路径
 		args := append([]string{filePath})
 		os.StartProcess(filePath, args, &os.ProcAttr{Files: []*os.File{os.Stdin, os.Stdout, os.Stderr}})
 		return
@@ -37,7 +37,7 @@ func test2() {
 
 func test3() {
 	if os.Getppid() != 1 {
-		filePath, _ := filepath.Abs("/disk/mygopath/src/iotestgo/res/run.sh") //将命令行参数中执行文件路径转换成可用路径
+		filePath, _ := filepath.Abs("/disk/mygopath/src/go-study/res/run.sh") //将命令行参数中执行文件路径转换成可用路径
 		args := append([]string{filePath})
 
 		attr := &os.ProcAttr{Files: []*os.File{os.Stdin, os.Stdout, os.Stderr}}
@@ -60,7 +60,7 @@ func test3() {
 
 func test4() {
 	if os.Getppid() != 1 {
-		argv0 := "/disk/mygopath/src/iotestgo/res/run.sh"
+		argv0 := "/disk/mygopath/src/go-study/res/run.sh"
 
 		attr := &os.ProcAttr{Files: []*os.File{os.Stdin, os.Stdout, os.Stderr}}
 

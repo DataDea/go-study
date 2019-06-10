@@ -7,7 +7,7 @@ package mypkg
 //import . "fmt" //3
 import (
 	"fmt"
-	"iotestgo/mypkg/a" //此处执行init
+	"go-study/mypkg/a" //此处执行init
 	"strconv"
 ) //4
 func Mypkg() {

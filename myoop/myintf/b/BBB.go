@@ -2,7 +2,7 @@ package b
 
 import (
 	"fmt"
-	"iotestgo/myoop/myintf/c"
+	"go-study/myoop/myintf/c"
 )
 
 type BBB struct {

@@ -12,7 +12,7 @@ func MyExec() {
 	cmd := exec.Command("sh")
 	cmd.Stdin = in
 	go func() {
-		in.WriteString("echo hello world > /disk/mygopath/src/iotestgo/res/test.txt\n")
+		in.WriteString("echo hello world > /disk/mygopath/src/go-study/res/test.txt\n")
 		in.WriteString("exit\n")
 	}()
 	if err := cmd.Run(); err != nil {

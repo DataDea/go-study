@@ -16,11 +16,11 @@ func check(e error) {
 
 func MyFile2() {
 
-	dat, err := ioutil.ReadFile("/disk/mygopath/src/iotestgo/res/myfile.txt")
+	dat, err := ioutil.ReadFile("/disk/mygopath/src/go-study/res/myfile.txt")
 	check(err)
 	fmt.Print(string(dat))
 
-	f, err := os.Open("/disk/mygopath/src/iotestgo/res/myfile.txt")
+	f, err := os.Open("/disk/mygopath/src/go-study/res/myfile.txt")
 	check(err)
 
 	b1 := make([]byte, 5)

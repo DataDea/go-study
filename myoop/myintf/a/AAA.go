@@ -2,7 +2,7 @@ package a
 
 import (
 	"fmt"
-	"iotestgo/myoop/myintf/c"
+	"go-study/myoop/myintf/c"
 )
 
 type AAA struct {

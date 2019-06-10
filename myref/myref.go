@@ -162,7 +162,7 @@ func Myref() {
 	fmt.Println(typ.String())                      // *myref.person
 	fmt.Println(typ.Elem().String())               // myref.person
 	fmt.Println(typ.Elem().FieldByIndex([]int{0})) // {int go.builtin int  0 [0] true}
-	fmt.Println(typ.Elem().FieldByName("name"))    // {name iotestgo/myref string  8 [1] false} true
+	fmt.Println(typ.Elem().FieldByName("name"))    // {name go-study/myref string  8 [1] false} true
 
 	fmt.Println(typ.Kind() == reflect.Ptr)           // true
 	fmt.Println(typ.Elem().Kind() == reflect.Struct) // true

@@ -11,7 +11,7 @@ import (
 
 func MySsl() {
 	http.HandleFunc("/hello", helloHandler)
-	err := http.ListenAndServeTLS(":8080", "/disk/mygopath/src/iotestgo/myio/mysock/mynet/myssl/cert.pem", "/disk/mygopath/src/iotestgo/myio/mysock/mynet/myssl/key.pem", nil)
+	err := http.ListenAndServeTLS(":8080", "/disk/mygopath/src/go-study/myio/mysock/mynet/myssl/cert.pem", "/disk/mygopath/src/go-study/myio/mysock/mynet/myssl/key.pem", nil)
 	if err != nil {
 		log.Fatal("ListenAndServeTLS:", err.Error())
 	}

@@ -1,5 +1,7 @@
 package main
 
+import "go-study/mypkg"
+
 //例子程序如下：
 /*
 type Data struct{
@@ -21,7 +23,7 @@ func main(){
 func main() {
 
 	//=========包================
-	//mypkg.Mypkg()
+	mypkg.Mypkg()
 
 	//=========变量================
 	//myvar.Myvar()

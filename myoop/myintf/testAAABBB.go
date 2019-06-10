@@ -1,18 +1,18 @@
 package myintf
 
 import (
-	"iotestgo/myoop/myintf/a"
-	"iotestgo/myoop/myintf/b"
+	"go-study/myoop/myintf/a"
+	"go-study/myoop/myintf/b"
 )
 
 /*
 如果回圈引用就会报以下错误：
 import cycle not allowed
 package main
-	imports iotestgo/myoop/myintf
-	imports iotestgo/myoop/myintf/a
-	imports iotestgo/myoop/myintf/b
-	imports iotestgo/myoop/myintf/a
+	imports go-study/myoop/myintf
+	imports go-study/myoop/myintf/a
+	imports go-study/myoop/myintf/b
+	imports go-study/myoop/myintf/a
 */
 func TestAAABBBCCC() {
 	obj := a.AAA{"AAA"}

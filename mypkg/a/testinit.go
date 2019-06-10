@@ -2,7 +2,7 @@ package a
 
 import (
 	"fmt"
-	"iotestgo/mypkg/b"
+	"go-study/mypkg/b"
 )
 
 func init() {

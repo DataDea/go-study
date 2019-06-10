@@ -29,7 +29,7 @@ func Myfile() {
 }
 
 func mywritefile() {
-	userFile := "/disk/mygopath/src/iotestgo/res/myfile.txt" //文件路径
+	userFile := "/disk/mygopath/src/go-study/res/myfile.txt" //文件路径
 	fout, err := os.Create(userFile)                         //根据路径创建File的内存地址
 	defer fout.Close()                                       //延迟关闭资源
 	if err != nil {
@@ -43,7 +43,7 @@ func mywritefile() {
 }
 
 func myreadfile() {
-	userFile := "/disk/mygopath/src/iotestgo/res/myfile.txt" //文件路径
+	userFile := "/disk/mygopath/src/go-study/res/myfile.txt" //文件路径
 	fin, err := os.Open(userFile)                            //打开文件,返回File的内存地址
 	defer fin.Close()                                        //延迟关闭资源
 	if err != nil {
@@ -64,13 +64,13 @@ func myreadfile() {
 }
 
 func mycopyfile() {
-	fi, err := os.Open("/disk/mygopath/src/iotestgo/res/input.txt") //打开输入*File
+	fi, err := os.Open("/disk/mygopath/src/go-study/res/input.txt") //打开输入*File
 	if err != nil {
 		panic(err)
 	}
 	defer fi.Close()
 
-	fo, err := os.Create("/disk/mygopath/src/iotestgo/res/output.txt") //创建输出*File
+	fo, err := os.Create("/disk/mygopath/src/go-study/res/output.txt") //创建输出*File
 	if err != nil {
 		panic(err)
 	}
@@ -95,14 +95,14 @@ func mycopyfile() {
 }
 
 func mybufiocopyfile() {
-	fi, err := os.Open("/disk/mygopath/src/iotestgo/res/input.txt") //打开输入*File
+	fi, err := os.Open("/disk/mygopath/src/go-study/res/input.txt") //打开输入*File
 	if err != nil {
 		panic(err)
 	}
 	defer fi.Close()
 	r := bufio.NewReader(fi) //创建一个读取缓冲流
 
-	fo, err := os.Create("/disk/mygopath/src/iotestgo/res/output.txt") //创建输出*File
+	fo, err := os.Create("/disk/mygopath/src/go-study/res/output.txt") //创建输出*File
 	if err != nil {
 		panic(err)
 	}
@@ -132,12 +132,12 @@ func mybufiocopyfile() {
 }
 
 func myioutilcopyfile() {
-	b, err := ioutil.ReadFile("/disk/mygopath/src/iotestgo/res/input.txt") //读文件
+	b, err := ioutil.ReadFile("/disk/mygopath/src/go-study/res/input.txt") //读文件
 	if err != nil {
 		panic(err)
 	}
 
-	err = ioutil.WriteFile("/disk/mygopath/src/iotestgo/res/output.txt", b, 0644) //写文件
+	err = ioutil.WriteFile("/disk/mygopath/src/go-study/res/output.txt", b, 0644) //写文件
 	if err != nil {
 		panic(err)
 	}

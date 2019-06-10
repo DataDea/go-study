@@ -19,13 +19,13 @@ RawSyscall 存在的意义是为那些永远不会阻塞的系统调用准备的
 我们自己的程序需要时，应该用 Syscall。
 */
 func MySyscall() {
-	syscall.Chmod("/disk/mygopath/src/iotestgo/res/myfile.txt", 0777)
+	syscall.Chmod("/disk/mygopath/src/go-study/res/myfile.txt", 0777)
 
 	fmt.Println("========================1=======================")
 	//========================================================================
 
 	var _p0 *byte
-	_p0, err := syscall.BytePtrFromString("/disk/mygopath/src/iotestgo/res/input.txt")
+	_p0, err := syscall.BytePtrFromString("/disk/mygopath/src/go-study/res/input.txt")
 	if err != nil {
 		return
 	}
